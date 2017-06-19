@@ -1,4 +1,4 @@
-# docker-chunky [![](https://images.microbadger.com/badges/version/birkhofflee/anonypages.svg)](https://microbadger.com/images/birkhofflee/anonypages) [![](https://images.microbadger.com/badges/image/birkhofflee/anonypages.svg)](https://microbadger.com/images/birkhofflee/anonypages)
+# docker-chunky [![](https://images.microbadger.com/badges/version/birkhofflee/docker-chunky.svg)](https://microbadger.com/images/birkhofflee/docker-chunky) [![](https://images.microbadger.com/badges/image/birkhofflee/docker-chunky.svg)](https://microbadger.com/images/birkhofflee/docker-chunky)
 Docker image of Chunky
 
 # Usage
