@@ -16,5 +16,5 @@ Here's an example for how to render a map:
 
 ```bash
 $ ... put some scene data into ./chunkydata/scenes ...
-$ docker run -it -e "MINECRAFT_VERSION=1.11.2" -v $(pwd)/chunkydata:/data birkhofflee/docker-chunky --render some-scene -threads 24 -texture /data/texture_pack.zip
+$ docker run -it -e "MINECRAFT_VERSION=1.11.2" -v $(pwd)/chunkydata:/data birkhofflee/docker-chunky -render some-scene -threads 24 -texture /data/texture_pack.zip
 ```
