@@ -5,16 +5,20 @@ ENV JAVA_ARGS ""
 ENV MINECRAFT_VERSION "1.11.2"
 
 WORKDIR /data
-COPY chunky.sh /usr/local/bin/chunky
+VOLUME "/data"
 
-RUN apt-get update \
-    && apt-get install -y wget unzip \
-    && wget $CHUNKYLAUNCHER_URL \
-    && chmod +x /usr/local/bin/chunky \
+ADD "${CHUNKYLAUNCHER_URL}" /srv/ChunkyLauncher.jar
+
+COPY chunky.sh /usr/local/bin/chunky
+RUN chmod +x /usr/local/bin/chunky
+
+RUN cd /srv \
+    && java -jar ChunkyLauncher.jar --version \
+    && chmod 444 /srv/ChunkyLauncher.jar
+
+RUN cd /data \
     && chunky --update \
     && chunky -download-mc $MINECRAFT_VERSION
-
-VOLUME ["/data"]
 
 ENTRYPOINT ["chunky"]
 
