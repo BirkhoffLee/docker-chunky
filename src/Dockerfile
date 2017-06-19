@@ -16,10 +16,6 @@ RUN cd /srv \
     && java -jar ChunkyLauncher.jar --version \
     && chmod 444 /srv/ChunkyLauncher.jar
 
-RUN cd /data \
-    && chunky --update \
-    && chunky -download-mc $MINECRAFT_VERSION
-
 ENTRYPOINT ["chunky"]
 
 CMD ["--version"]
